@@ -1,4 +1,5 @@
 import unittest
+
 import budget
 from budget import create_spend_chart
 
@@ -87,7 +88,7 @@ class UnitTests(unittest.TestCase):
         self.food.withdraw(45.67, "milk, cereal, eggs, bacon, bread")
         self.food.transfer(20, self.entertainment)
         actual = str(self.food)
-        expected = f"*************Food*************\ndeposit                 900.00\nmilk, cereal, eggs, bac -45.67\nTransfer to Entertainme -20.00\nTotal: 834.33"
+        expected = "*************Food*************\ndeposit                 900.00\nmilk, cereal, eggs, bac -45.67\nTransfer to Entertainme -20.00\nTotal: 834.33"
         self.assertEqual(actual, expected, 'Expected different string representation of object.')
 
     def test_create_spend_chart(self):
@@ -103,3 +104,6 @@ class UnitTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+
